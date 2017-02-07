@@ -27,7 +27,7 @@
       <VBox alignment="CENTER" layoutX="471.0" layoutY="304.0" prefHeight="106.0" prefWidth="176.0" spacing="20.0">
          <children>
             <Button mnemonicParsing="false" text="Change name" />
-            <Button mnemonicParsing="false" text="Disconnect" />
+            <Button mnemonicParsing="false" onAction="#disconnect" text="Disconnect" />
          </children>
       </VBox>
    </children>

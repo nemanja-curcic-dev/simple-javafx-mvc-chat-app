@@ -20,10 +20,12 @@ public class Server {
         try {
             ServerSocket serverSocket = new ServerSocket(9000);
 
+            System.out.println("Server starded...");
+
             while (true)
             {
                 sockets.add(serverSocket.accept());
-                new ServerThread(sockets, outputStreams, currentUsers);
+                new ServerThread(sockets, outputStreams, currentUsers).start();
             }
 
         } catch (IOException e) {
