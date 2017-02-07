@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.VBox?>
 
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="489.0" prefWidth="684.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="489.0" prefWidth="684.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
    <children>
       <VBox alignment="TOP_CENTER" layoutX="17.0" layoutY="17.0" prefHeight="467.0" prefWidth="388.0" spacing="10.0">
          <children>
@@ -15,7 +15,7 @@
             <TextArea fx:id="chatArea" prefHeight="215.0" prefWidth="388.0" />
             <Label alignment="CENTER" prefHeight="16.0" prefWidth="404.0" text="Send message" />
             <TextArea fx:id="sendMessage" prefHeight="106.0" prefWidth="357.0" />
-            <Button mnemonicParsing="false" text="Send" />
+            <Button mnemonicParsing="false" onAction="#sendMessage" text="Send" />
          </children>
       </VBox>
       <VBox alignment="TOP_CENTER" layoutX="471.0" layoutY="27.0" prefHeight="250.0" prefWidth="176.0" spacing="10.0">
@@ -26,8 +26,8 @@
       </VBox>
       <VBox alignment="CENTER" layoutX="471.0" layoutY="304.0" prefHeight="106.0" prefWidth="176.0" spacing="20.0">
          <children>
-            <Button mnemonicParsing="false" text="Change name" />
-            <Button mnemonicParsing="false" text="Disconnect" />
+            <Button mnemonicParsing="false" onAction="#changeName" text="Change name" />
+            <Button mnemonicParsing="false" onAction="#disconnect" text="Disconnect" />
          </children>
       </VBox>
    </children>
